@@ -1,7 +1,5 @@
-import java.awt.Dimension;
+import java.awt.*;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
 
     public static void main(String[] args) {
@@ -12,14 +10,12 @@ public class Main {
         createAndShowGUI(scaledSize, title);
     }
 
-    private static  void createAndShowGUI(Dimension scaledSize, String title)
-    {
+    private static void createAndShowGUI(Dimension scaledSize, String title) {
         SnowManGUI gui = new SnowManGUI(scaledSize, title);
         javax.swing.SwingUtilities.invokeLater(gui);
     }
 
-    private static String getJavaVersion()
-    {
+    private static String getJavaVersion() {
         Runtime.Version runTimeVersion = Runtime.version();
         return String.format("%s.%s.%s.%s", runTimeVersion.feature(), runTimeVersion.interim(), runTimeVersion.update(), runTimeVersion.patch());
     }

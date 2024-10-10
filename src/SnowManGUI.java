@@ -1,38 +1,39 @@
 /*
 Snow Man
  */
+
 import javax.swing.*;
-import java.awt.Dimension;
+import java.awt.*;
 
-public class SnowManGUI implements Runnable
-{
-	private final Dimension scaledSize;
-	private final String title;
+public class SnowManGUI implements Runnable {
 
-	public SnowManGUI(Dimension scaledSize, String title) {
-		this.scaledSize = scaledSize;
-		this.title = title;
-	}
+    private final Dimension scaledSize;
+    private final String title;
 
-	/**
-	 * Runs this GUI in a separate thread.
-	 */
-	@Override
-	public void run() {
-		JFrame frame = new JFrame(title);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		// note the use of setPreferredSize instead of setSize, coupled with
-		// frame.pack() below:
-		frame.setSize(scaledSize);
-		frame.setPreferredSize(scaledSize);
-		SnowManPanel pnl = new SnowManPanel();
-		frame.add(pnl);
+    public SnowManGUI(Dimension scaledSize, String title) {
+        this.scaledSize = scaledSize;
+        this.title = title;
+    }
 
-		frame.pack();
+    /**
+     * Runs this GUI in a separate thread.
+     */
+    @Override
+    public void run() {
+        JFrame frame = new JFrame(title);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        // note the use of setPreferredSize instead of setSize, coupled with
+        // frame.pack() below:
+        frame.setSize(scaledSize);
+        frame.setPreferredSize(scaledSize);
+        SnowManPanel pnl = new SnowManPanel();
+        frame.add(pnl);
 
-		// puts the JFrame in the middle of the physical screen
-		frame.setLocationRelativeTo(null);
-		frame.setVisible(true);
-	}
+        frame.pack();
+
+        // puts the JFrame in the middle of the physical screen
+        frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
+    }
 
 }
