@@ -2,8 +2,8 @@
 Snow Man
  */
 
-import javax.swing.*;
-import java.awt.*;
+import javax.swing.JFrame;
+import java.awt.Dimension;
 
 public class SnowManGUI implements Runnable {
 
