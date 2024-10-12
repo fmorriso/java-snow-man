@@ -9,6 +9,7 @@ An example of drawing a Snowman using AWT and Swing
 
 ## Change History
 
-| Date       | Description      |
-|:-----------|:-----------------|
-| 2024-10-10 | Initial creation |
+| Date       | Description          |
+|:-----------|:---------------------|
+| 2024-10-10 | Initial creation     |
+| 2024-10-12 | Change scale factors |

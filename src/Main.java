@@ -6,7 +6,7 @@ public class Main {
 
         String title = String.format("Java Snowman using java version %s", getJavaVersion());
         System.out.println(title);
-        Dimension scaledSize = SwingScreenUtilities.getScaledSize(.6, 10);
+        Dimension scaledSize = SwingScreenUtilities.getScaledSize(0.5, 100);
         createAndShowGUI(scaledSize, title);
     }
 
